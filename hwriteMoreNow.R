@@ -1,9 +1,9 @@
 ##################
-system("rm *.sdf")
-system("rm *.smi")
-system("rm *.png")
+#system("rm *.sdf")
+#system("rm *.smi")
+#system("rm *.png")
 #system("unzip YAWYE_clean.sdf.gz")
-system("cp /home/waynebrain/Desktop/YAWYE/YAWYE_clean.sdf .")
+#system("cp /home/waynebrain/Desktop/YAWYE/YAWYE_clean.sdf .")
 #################
 library(ChemmineR)
 #################
