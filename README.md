@@ -15,7 +15,7 @@ How to use this:
 
 FYI
 
-The test.html is in the form of:
+The test.html is in the form of
 
 
 			nearest_neighbor1	nearest_neighbor2	...
