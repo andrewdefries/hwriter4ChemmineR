@@ -4,6 +4,8 @@ mkdir WorkHere
 
 cp *.R WorkHere/
 
+cp A B C D E WorkHere/
+
 cp YAWYE.sdf WorkHere/
 
 cd WorkHere/

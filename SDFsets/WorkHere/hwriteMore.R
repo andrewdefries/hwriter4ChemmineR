@@ -7,10 +7,10 @@ library(hwriter)
 #sdfset<-sdfsample
 #smiset<-sdf2smiles(sdfset)
 apset<-sdf2ap(sdfset)
-fpset<-desc2fp(apset)
+#fpset<-desc2fp(apset)
 ##
 naebors<-10
-nnm <- nearestNeighbors(fpset,numNbrs=naebors)
+nnm <- nearestNeighbors(apset,numNbrs=naebors)
 ###############
 png<-list.files(pattern="smi.png",recursive=F)
 ###############
@@ -19,10 +19,12 @@ png<-list.files(pattern="smi.png",recursive=F)
 #himg=hwriteImage(matrix(paste(nnm$names, ".smi.png", sep="")[matrix(nnm$index, byrow=T)]), table=FALSE)
 
 #himg=hwriteImage(matrix(paste(nnm$names[matrix(nnm$index, byrow=F)], ".smi.png", sep="")), table=FALSE)
+
 Draw<-cbind(paste(nnm$names[nnm$index[,1]], ".smi.png", sep=""), paste(nnm$names[nnm$index[,2]], ".smi.png", sep=""), paste(nnm$names[nnm$index[,3]], ".smi.png", sep=""), paste(nnm$names[nnm$index[,4]], ".smi.png", sep=""),paste(nnm$names[nnm$index[,5]], ".smi.png", sep=""),paste(nnm$names[nnm$index[,6]], ".smi.png", sep=""),paste(nnm$names[nnm$index[,7]], ".smi.png", sep=""),paste(nnm$names[nnm$index[,8]], ".smi.png", sep=""),paste(nnm$names[nnm$index[,9]], ".smi.png", sep=""),paste(nnm$names[nnm$index[,10]], ".smi.png", sep=""))
 
-himg=hwriteImage(Draw, table=FALSE)
-##
+###################################
+himg=hwriteImage(Draw, link=paste("file:///home/debisbad/Desktop/NewGit/hwriter4ChemmineR/SDFsets/WorkHere/", Draw, ".html", sep=""), table=FALSE)
+###################################
 
 #mat=cbind(1:length(png), substring(sort(names(as.list(as.character(smiset)))),1,25), himg, himg)# as.character(smiset))
 

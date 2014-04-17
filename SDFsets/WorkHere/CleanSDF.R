@@ -33,8 +33,8 @@ cid(sdfset)<-gsub("\\?", "X", cid(sdfset))
 cid(sdfset)<-gsub("\\=", "_", cid(sdfset))
 cid(sdfset)<-gsub("\\/", "_", cid(sdfset))
 cid(sdfset)<-gsub(" ", "_", cid(sdfset))
-cid(sdfset)<-gsub("\\(", "X", cid(sdfset))
-cid(sdfset)<-gsub("\\)", "X", cid(sdfset))
+#cid(sdfset)<-gsub("\\(", "X", cid(sdfset))
+#cid(sdfset)<-gsub("\\)", "X", cid(sdfset))
 
 
 #apset validation to weed out broken molecules

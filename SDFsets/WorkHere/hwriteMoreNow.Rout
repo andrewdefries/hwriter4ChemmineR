@@ -34,16 +34,19 @@ Type 'q()' to quit R.
 > cid(sdfset)<-sdfid(sdfset)
 > #write.SDF(sdfset,file="load_me.sdf", sig=T)
 > ###############
+> 
 > ################
 > smiset<-sdf2smiles(sdfset) #(sdfset[1:2])
 Using ChemmineOB
 > cid(smiset)<-cid(sdfset)
 > ################
+> 
+> #########################
 > WriteSdfOut<-function(a){
-+ ####
++ #########################
 + write.SDF(sdfset[[a]], file=paste(cid(sdfset[a]), ".sdf", sep=""), sig=T, cid=T)
 + }
-> ####
+> #########################
 > a<-1:length(smiset) #change to 2 for testing
 > lapply(a,WriteSdfOut)
 [[1]]
@@ -208,13 +211,15 @@ NULL
 [[54]]
 NULL
 
-> ################
+> #########################
+> 
+> #########################
 > WriteSmiOut<-function(a){
-+ ####
++ #########################
 + write.SMI(smi=smiset[a], file=paste(cid(sdfset[a]), ".smi", sep=""), cid=T)
 + }
-> ####
-> a<-1:length(smiset) #change to 2 for testing
+> #########################
+> a<-1:length(smiset) 
 > lapply(a,WriteSmiOut)
 [[1]]
 NULL
@@ -378,10 +383,14 @@ NULL
 [[54]]
 NULL
 
-> ################
+> #########################
+> 
+> #########################
 > system("for i in *.smi
 + do babel $i -O $i.png 
 + done")
+1 molecule converted
+52 audit log messages 
 1 molecule converted
 47 audit log messages 
 1 molecule converted
@@ -451,8 +460,6 @@ NULL
 1 molecule converted
 52 audit log messages 
 1 molecule converted
-52 audit log messages 
-1 molecule converted
 50 audit log messages 
 1 molecule converted
 50 audit log messages 
@@ -490,8 +497,30 @@ NULL
 50 audit log messages 
 1 molecule converted
 50 audit log messages 
-> ###############
+> #########################
+> 
+> #########################
+> #system("for i in *.smi
+> #do babel $i -O $i.svg
+> #done")
+> #########################
+> 
+> #########################
+> system("for i in *.smi.png
++ do cat A B C > $i.html
++ echo $i >> $i.html
++ cat D >> $i.html
++ echo $i | sed 's/\\.smi.png/\\.sdf/g' >> $i.html
++ cat E >> $i.html
++ done")
+> #########################
+> 
+> 
+> 
 > source("hwriteMore.R") 
+Warning message:
+In cbind(1:length(png), nnm$names, himg) :
+  number of rows of result is not a multiple of vector length (arg 1)
 > ###############
 > #system("firefox test.html")
 > ###############
@@ -504,4 +533,4 @@ NULL
 > 
 > proc.time()
    user  system elapsed 
-  9.364   0.492   9.978 
+  5.464   0.300   6.073 

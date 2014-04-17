@@ -55,8 +55,8 @@ In read.SDFset(files[1]) :
 > cid(sdfset)<-gsub("\\=", "_", cid(sdfset))
 > cid(sdfset)<-gsub("\\/", "_", cid(sdfset))
 > cid(sdfset)<-gsub(" ", "_", cid(sdfset))
-> cid(sdfset)<-gsub("\\(", "X", cid(sdfset))
-> cid(sdfset)<-gsub("\\)", "X", cid(sdfset))
+> #cid(sdfset)<-gsub("\\(", "X", cid(sdfset))
+> #cid(sdfset)<-gsub("\\)", "X", cid(sdfset))
 > 
 > 
 > #apset validation to weed out broken molecules
@@ -73,4 +73,4 @@ In read.SDFset(files[1]) :
 > 
 > proc.time()
    user  system elapsed 
-  1.272   0.044   1.317 
+  0.748   0.032   0.775 
