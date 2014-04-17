@@ -15,11 +15,11 @@ How to use this:
 
 FYI
 
-The test.html is in the form of
+The test.html is in the form of:
 
 
-			nearest_neighbor1	nearest_neighbor2	...
-query_compound_img	nearest_neighbor2_img	nearest_neighbor2_img	...
+			nearest_neighbor1	nearest_neighbor2	etc
+query_compound_img	nearest_neighbor2_img	nearest_neighbor2_img	etc
 	.			.			.
 	.			.			.
 	.			.			.
