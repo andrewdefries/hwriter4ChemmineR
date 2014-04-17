@@ -1,16 +1,11 @@
-##################
-#system("rm *.sdf")
-#system("rm *.smi")
-#system("rm *.png")
-#system("unzip YAWYE_clean.sdf.gz")
-#system("cp /home/waynebrain/Desktop/YAWYE/YAWYE_clean.sdf .")
 #################
 library(ChemmineR)
 #################
-##data(sdfsample)
-##cid(sdfsample)<-sdfid(sdfsample)
-##sdfset<-sdfsample
-files<-list.files(pattern=".sdf", recursive=F)
+
+source("CleanSDF.R")
+
+files<-list.files(pattern="Cleaned.sdf", recursive=F)
+
 t<-1
 sdfset<-read.SDFset(files[t])
 ###############
@@ -37,8 +32,7 @@ system("for i in *.smi
 do babel $i -O $i.png 
 done")
 ###############
-#source("hwriteMoreTable.R") #works
-source("hwriteMore.R") #fixed
+source("hwriteMore.R") 
 ###############
 system("firefox test.html")
 ###############
