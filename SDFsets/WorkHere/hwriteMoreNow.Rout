@@ -533,4 +533,4 @@ In cbind(1:length(png), nnm$names, himg) :
 > 
 > proc.time()
    user  system elapsed 
-  5.464   0.300   6.073 
+  7.596   0.340   8.156 

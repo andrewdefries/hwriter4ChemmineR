@@ -28,4 +28,4 @@ echo "####################"
 echo "####################"
 echo "####################"
 
-firefox test.html
+google-chrome test.html
