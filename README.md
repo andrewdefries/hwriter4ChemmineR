@@ -38,3 +38,10 @@ The test.html is in the following form:
 The columns are nearest_neighbor1,	nearest_neighbor2, ...	
 
 Each row has the query compound in the first cell
+
+Visualizing Nearest Neighbors in large tables
+=============================================
+
+Sometimes the best way to view relationships is in a table. Therefore, the Tanimoto similarity relationships of small molecules in the dataset have been calculated and used to embed compounds into html tables for quick browsing. 
+
+![Nearest neighbor tables](https://github.com/andrewdefries/andrewdefries.github.io/blob/master/Images/CheminformaticsHwriter.png)
